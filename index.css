@@ -43,7 +43,35 @@ main .social-media img {
 main .social-media a:first-child img {
     margin-left: 0;
 }
+main .alternative{
+    margin-top: 2rem;
+}
 
+main .alternative span{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.3);
+    position: relative;
+
+}
+main .alternative span::before, main .alternative span::after{
+    position:absolute;
+    content:'';
+    height: 1px;
+    width:100px;
+    bottom: 50%;
+    right: 50px;
+    background:rgba(255, 255, 255, 0.3);
+}
+main .alternative span::after{
+    left: 50px;
+}
+nput:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none ;
+    background-color: -internal-light-dark(black, black) ;
+    color: -internal-light-dark(black, black) ;
+}
 main form{
     display: flex;
     flex-direction: column;
@@ -107,4 +135,19 @@ section.images .circle {
     clip-path: circle(40% at right 80%);
     z-index: -1;
    
+}
+
+@media (max-width:425px) {
+    section.images{
+        display: none;
+    }
+    main{
+        margin: 0;
+    }
+    main h1{
+        font-size: 50px;
+    }
+    section.circle{
+        display: flex;
+    }
 }
